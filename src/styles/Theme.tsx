@@ -1,12 +1,13 @@
 export const theme = {
   colors: {
-    primaryBq: "#1F1F20",
-    secondaryBq: "#252527",
-
-    fourthBq: "#2D4CFF21",
+    primaryBq: " #0FBF611A",
+    secondaryBq: "#FFFFFF",
 
     reverseprimaryBq: "",
     reversesecondaryBq: "",
+
+    thirdBq: " #0FBF61",
+    fourthBq: "#2D4CFF21",
 
     font: "#FFFFFF",
   },

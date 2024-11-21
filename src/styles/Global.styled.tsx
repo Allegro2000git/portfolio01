@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+
 *, 
 *::before, 
 *::after {
@@ -9,9 +10,14 @@ export const GlobalStyles = createGlobalStyle`
 	box-sizing: border-box;
   }
 
+ html {
+   font-size: 16px;
+}
+
+
 body {
 line-height: 1.2;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 -webkit-font-smoothing: antialiased;
