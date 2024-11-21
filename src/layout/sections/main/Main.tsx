@@ -16,8 +16,8 @@ export const Main = () => {
             <Text
               fontSize="1.2rem"
               maxWidth={"476px"}
-              lineHeight={"1.5"}
-              padding="0 0 2rem 0"
+              lineHeight={"1.8"}
+              padding={"0 0 2rem 0"}
             >
               <Subtitle>Hello, I’m</Subtitle>
               <Title>Fabio Scaletta</Title>
@@ -34,7 +34,7 @@ export const Main = () => {
               Send Email
             </Button>
           </FlexWrapper>
-          <ImageWrapper src={mainImg} borderRadius={"25px"}></ImageWrapper>
+          <ImageWrapper src={mainImg} borderRadius={"25px"} />
         </FlexWrapper>
       </Container>
     </StyledMain>
@@ -42,7 +42,6 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 100vh;
   background: ${theme.colors.primaryBq};
 `;
 
