@@ -4,6 +4,7 @@ import { Icon } from "../icon/Icon";
 type SocialItemType = {
   icon: string;
   url: string;
+  viewbox?: string;
 };
 
 const socialItems: Array<SocialItemType> = [
@@ -25,7 +26,7 @@ export const Social = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon iconid={item.icon} />
+                <Icon iconid={item.icon} viewBox={"-25 -20 80 70"} />
               </SocialLink>
             </SocialItem>
           );
@@ -38,6 +39,7 @@ export const Social = () => {
 const StyledSocial = styled.nav`
   ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     justify-content: space-between;
   }

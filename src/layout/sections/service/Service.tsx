@@ -17,7 +17,7 @@ export const Service = () => {
       <Container>
         <Subtitle>My service</Subtitle>
         <SectionTitle padding={"16px 0 92px 0"}>What I Do</SectionTitle>
-        <FlexWrapper justify={"space-around"} align={"center"}>
+        <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
           <Direction icon={"code"} number={"01"} title={"UX/UI Design"} />
           <Direction
             icon={"ux"}
@@ -31,21 +31,21 @@ export const Service = () => {
           />
         </FlexWrapper>
         <StyledProjects>
-          <FlexWrapper justify={"space-around"} align={"start"}>
+          <FlexWrapper justify={"space-around"} align={"start"} wrap={"wrap"}>
             <DirectionsProjects
               subtitle={"UX/UI DESIGN"}
               title={"Implement UX design into live and user friendly "}
             />
             <ImageWrapper src={proj1} borderRadius={"20px"} />
           </FlexWrapper>
-          <FlexWrapper justify={"space-around"} align={"start"}>
+          <FlexWrapper justify={"space-around"} align={"start"} wrap={"wrap"}>
             <DirectionsProjects
               subtitle={"FRONT END DEVELOPMENT"}
               title={"Implement UX design into live and user friendly "}
             />
             <ImageWrapper src={proj2} borderRadius={"20px"} />
           </FlexWrapper>
-          <FlexWrapper justify={"space-around"} align={"start"}>
+          <FlexWrapper justify={"space-around"} align={"start"} wrap={"wrap"}>
             <DirectionsProjects
               subtitle={"RESPONSIVE DESIGN"}
               title={
@@ -70,7 +70,7 @@ export const Service = () => {
 
 const StyledService = styled.section`
   background: ${theme.colors.secondaryBq};
-  padding-top: 140px;
+  padding: 140px 0 62px 0;
   text-align: center;
 `;
 
