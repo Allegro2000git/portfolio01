@@ -5,7 +5,7 @@ import { theme } from "../../styles/Theme";
 import { Logo } from "../../components/logo/Logo";
 import { HeaderMenu } from "./headermenu/HeaderMenu";
 
-const headerItems = ["Home", "About", "Service", "My work", "Resume"];
+const headerItems = ["Home", "About", "Service", "Contact", "Resume"];
 
 export const Header = () => {
   return (

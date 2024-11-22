@@ -5,6 +5,7 @@ import { Text } from "../Text";
 type AboutSkillPropsType = {
   icon: string;
   title: string;
+  viewbox?: string;
 };
 
 export const Skill = (props: AboutSkillPropsType) => {

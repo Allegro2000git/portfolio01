@@ -11,12 +11,12 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align={"center"} justify={"space-around"}>
-          <FlexWrapper direction={"column"}>
+        <FlexWrapper align={"center"} justify={"space-between"}>
+          <FlexWrapper direction={"column"} justify="space-around">
             <Text
               fontSize="1.2rem"
               maxWidth={"476px"}
-              lineHeight={"1.8"}
+              lineHeight={"1.5"}
               padding={"0 0 2rem 0"}
             >
               <Subtitle>Hello, I’m</Subtitle>
@@ -43,9 +43,11 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   background: ${theme.colors.primaryBq};
+  padding: 47px 0 92px 0;
 `;
 
 const Subtitle = styled.span`
+  display: inline-block;
   font-weight: 400px;
   font-size: 30px;
   color: #0fbf61;

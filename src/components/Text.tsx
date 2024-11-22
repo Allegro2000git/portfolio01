@@ -14,6 +14,6 @@ export const Text = styled.p<TextPropsType>`
   font-weight: ${(props) => props.fontWeight || "400"};
   padding: ${(props) => props.padding || "undefined"};
   line-height: ${(props) => props.lineHeight || "undefined"};
-  text-align: ${(props) => props.textAlign || "undefined"};
+  text-align: ${(props) => props.textAlign || "left"};
   max-width: ${(props) => props.maxWidth || "undefined"};
 `;
