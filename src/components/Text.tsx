@@ -10,7 +10,7 @@ type TextPropsType = {
 };
 
 export const Text = styled.p<TextPropsType>`
-  font-size: ${(props) => props.fontSize || "1rem"};
+  font-size: ${(props) => props.fontSize || "18px"};
   font-weight: ${(props) => props.fontWeight || "400"};
   padding: ${(props) => props.padding || "undefined"};
   line-height: ${(props) => props.lineHeight || "undefined"};

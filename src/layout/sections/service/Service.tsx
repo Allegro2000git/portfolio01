@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Direction } from "./directions/Directions";
-import { DirectionsProjects } from "./directions/sliderProjects";
+import { DirectionsProjects } from "./directions/Projects";
 import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
-import { ImageWrapper } from "../../../components/wrapper/ImageWrapper";
+import { Image } from "../../../components/wrapper/Image";
 import proj1 from "../../../assets/images/proj1.webp";
 import proj2 from "../../../assets/images/proj2.webp";
 import proj3 from "../../../assets/images/proj3.webp";
@@ -31,28 +31,28 @@ export const Service = () => {
           />
         </FlexWrapper>
         <StyledProjects>
-          <FlexWrapper justify={"space-around"} align={"start"} wrap={"wrap"}>
+          <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
             <DirectionsProjects
               subtitle={"UX/UI DESIGN"}
               title={"Implement UX design into live and user friendly "}
             />
-            <ImageWrapper src={proj1} borderRadius={"20px"} />
+            <Image src={proj1} borderRadius={"20px"} />
           </FlexWrapper>
-          <FlexWrapper justify={"space-around"} align={"start"} wrap={"wrap"}>
+          <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
             <DirectionsProjects
               subtitle={"FRONT END DEVELOPMENT"}
               title={"Implement UX design into live and user friendly "}
             />
-            <ImageWrapper src={proj2} borderRadius={"20px"} />
+            <Image src={proj2} borderRadius={"20px"} />
           </FlexWrapper>
-          <FlexWrapper justify={"space-around"} align={"start"} wrap={"wrap"}>
+          <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
             <DirectionsProjects
               subtitle={"RESPONSIVE DESIGN"}
               title={
                 "I build landing pages and responsive websites and web App"
               }
             />
-            <ImageWrapper src={proj3} borderRadius={"20px"} />
+            <Image src={proj3} borderRadius={"20px"} />
           </FlexWrapper>
         </StyledProjects>
         <Button
@@ -70,11 +70,11 @@ export const Service = () => {
 
 const StyledService = styled.section`
   background: ${theme.colors.secondaryBq};
-  padding: 140px 0 62px 0;
+  padding: 140px 0 106px 0;
   text-align: center;
 `;
 
-const Subtitle = styled.span`
+const Subtitle = styled.h2`
   display: block;
   font-weight: 400;
   font-size: 18px;
@@ -82,4 +82,11 @@ const Subtitle = styled.span`
   text-align: center;
 `;
 
-const StyledProjects = styled.section``;
+const StyledProjects = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 10;
+`;

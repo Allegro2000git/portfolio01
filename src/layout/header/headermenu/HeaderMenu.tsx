@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../styles/Theme";
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
@@ -7,7 +8,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
         {props.menuItems.map((item, index) => {
           return (
             <ListItem key={index}>
-              <Link href="">{item}</Link>
+              <Link href="#">{item}</Link>
             </ListItem>
           );
         })}
@@ -24,12 +25,19 @@ const StyledHeaderMenu = styled.nav`
   }
 `;
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  &:last-child {
+    margin-right: 30px;
+  }
+`;
 
 const Link = styled.a`
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   text-align: center;
   font-size: 18px;
   color: #000000;
+
+  &:hover {
+    color: ${theme.colors.thirdBq};
+  }
 `;

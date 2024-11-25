@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Text } from "../../../../components/Text";
-import { Button } from "../../../../components/Button";
+import { theme } from "../../../../styles/Theme";
 
 type DirectionProjectsPropsType = {
   subtitle: string;
@@ -27,18 +27,28 @@ export const DirectionsProjects = (props: DirectionProjectsPropsType) => {
   );
 };
 
-const StyledDirectionProjects = styled.section`
-  padding-bottom: 108px;
+const StyledDirectionProjects = styled.div`
+  position: relative;
+  z-index: 2;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 1116px;
+    height: 431px;
+    border: 2px solid ${theme.colors.thirdBq};
+    border-radius: 30px;
+    left: -51px;
+    bottom: -90px;
+    z-index: -2;
+  }
 `;
 
 const Link = styled.a`
   cursor: pointer;
-  display: inline-block;
-  font-weight: 500px;
-  font-size: 1.25rem;
-  line-height: 1.3;
-  padding: 0.7rem;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 12px;
   color: #000000;
-  text-decoration: none;
-  transition: background-color 0.3s;
 `;

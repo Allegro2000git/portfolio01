@@ -11,13 +11,17 @@ type ButtonPropsType = {
 };
 
 export const Button = styled.button<ButtonPropsType>`
-  display: inline-block;
   cursor: pointer;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 18px;
   padding: ${(props) => props.padding || "undefined"};
-  line-height: ${(props) => props.lineHeight || "undefined"};
+  line-height: ${(props) => props.lineHeight || "1.2"};
   max-width: ${(props) => props.maxWidth || "undefined"};
   border-radius: ${(props) => props.borderRadiud || "50px"};
   color: ${(props) => props.color || "undefined"};
   background: ${(props) => props.background || theme.colors.thirdBq};
+  &:hover {
+    background-color: #717171;
+    color: ${theme.colors.font};
+  }
 `;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper";
 import { Text } from "../../../../components/Text";
+import { theme } from "../../../../styles/Theme";
 
 type DirectionsPropsType = {
   icon: string;
@@ -13,7 +14,9 @@ export const Direction = (props: DirectionsPropsType) => {
   return (
     <StyledDirection>
       <FlexWrapper align={"start"} justify={"space-between"}>
-        <Icon iconid={props.icon} />
+        <IconWrapper>
+          <Icon iconid={props.icon} />
+        </IconWrapper>
         <div>
           <Text
             fontWeight={"500"}
@@ -41,4 +44,11 @@ export const Direction = (props: DirectionsPropsType) => {
 
 const StyledDirection = styled.section`
   margin-bottom: 120px;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${theme.colors.primaryBq};
 `;

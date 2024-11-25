@@ -4,7 +4,7 @@ import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import aboutImg from "../../../assets/images/aboutImg.webp";
-import { ImageWrapper } from "../../../components/wrapper/ImageWrapper";
+import { Image } from "../../../components/wrapper/Image";
 import { Text } from "../../../components/Text";
 import { Skill } from "../../../components/skills/AboutSkill";
 
@@ -14,18 +14,20 @@ export const About = () => {
       <Container>
         <SectionTitle padding={"0 0 37px 0;"}>About Me</SectionTitle>
         <FlexWrapper justify={"space-between"}>
-          <ImageWrapper
-            src={aboutImg}
-            borderRadius={"25px"}
-            width={"280px"}
-            height={"420px"}
-          />
-          <FlexWrapper direction={"column"} align={"center"}>
+          <ImageWrapper>
+            <Image
+              src={aboutImg}
+              borderRadius={"25px"}
+              width={"280px"}
+              height={"420px"}
+            />
+          </ImageWrapper>
+          <FlexWrapper direction={"column"} align={"start"}>
             <Text
-              fontSize="1.2rem"
-              maxWidth={"551px"}
+              fontSize={"1.2rem"}
+              maxWidth={"580px"}
               lineHeight={"1.5"}
-              padding={"0 0 2rem 0"}
+              padding={"0 0 32px 15px"}
               textAlign={"start"}
             >
               Hello! My name is Fabio Scaletta and I am a{" "}
@@ -38,7 +40,7 @@ export const About = () => {
               creating dynamic and beautiful web pages. I have been in the field
               for nearly 5 years, and have been loving every minute of it.
             </Text>
-            <Text fontSize="1.2rem" lineHeight={"1.5"}>
+            <Text fontSize={"1.2rem"} lineHeight={"1.5"} padding={"0 0 0 15px"}>
               Here are a few technologies I’ve been working with recently:
             </Text>
             <FlexWrapper wrap={"wrap"}>
@@ -58,9 +60,27 @@ export const About = () => {
 
 const StyledAbout = styled.section`
   background: ${theme.colors.secondaryBq};
-  padding: 140px 0px 0px 0px;
   span {
     display: inline-block;
     color: #0fbf61;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 420px;
+    width: 280px;
+    border: 3px solid ${theme.colors.thirdBq};
+
+    position: absolute;
+    border-radius: 20px;
+    top: 38px;
+    left: -49px;
+    z-index: -1;
   }
 `;

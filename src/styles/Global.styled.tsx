@@ -26,6 +26,7 @@ font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
 
 a {
 	text-decoration: none;
+	cursor: pointer;
   }
 
 ul {
@@ -35,7 +36,7 @@ ul {
 button {
 	background-color: unset;
 	border: none;
+	cursor: pointer;
   }
-
 
 `;

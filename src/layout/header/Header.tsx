@@ -2,18 +2,29 @@ import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
 import { theme } from "../../styles/Theme";
-import { Logo } from "../../components/logo/Logo";
+import { Link } from "../../components/logo/Link";
 import { HeaderMenu } from "./headermenu/HeaderMenu";
+import { Button } from "../../components/Button";
 
-const headerItems = ["Home", "About", "Service", "Contact", "Resume"];
+const headerItems = ["Home", "About", "Service", "Contact"];
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
-          <Logo />
-          <HeaderMenu menuItems={headerItems} />
+          <Link />
+          <FlexWrapper justify="space-around" align={"center"} wrap={"wrap"}>
+            <HeaderMenu menuItems={headerItems} />
+            <Button
+              lineHeight={"1.2"}
+              padding={"1rem 2rem"}
+              maxWidth={"170px"}
+              color={"#151D41"}
+            >
+              Resume
+            </Button>
+          </FlexWrapper>
         </FlexWrapper>
       </Container>
     </StyledHeader>
@@ -21,11 +32,11 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background: ${theme.colors.primaryBq};
-  padding: 20px 0;
+  background: ${theme.colors.headerBq};
+  padding: 15px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
 `;

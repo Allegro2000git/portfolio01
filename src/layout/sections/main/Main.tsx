@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
-import { ImageWrapper } from "../../../components/wrapper/ImageWrapper";
+import { Image } from "../../../components/wrapper/Image";
 import mainImg from "../../../assets/images/mainImg.webp";
 import { Text } from "../../../components/Text";
 import { Button } from "../../../components/Button";
@@ -12,29 +12,19 @@ export const Main = () => {
     <StyledMain>
       <Container>
         <FlexWrapper align={"center"} justify={"space-between"}>
-          <FlexWrapper direction={"column"} justify="space-around">
-            <Text
-              fontSize="1.2rem"
-              maxWidth={"476px"}
-              lineHeight={"1.5"}
-              padding={"0 0 2rem 0"}
-            >
-              <Subtitle>Hello, I’m</Subtitle>
-              <Title>Fabio Scaletta</Title>
+          <div>
+            <SmallText>Hello, I’m</SmallText>
+            <Title>Fabio Scaletta</Title>
+            <Text maxWidth={"476px"} lineHeight={"1.5"} padding={"0 0 32px 0"}>
               I’m a UX/UI designer and Front End Developer based in Kuala
               Lumpur, Malaysia! I love designing, coding, creating and building
               stuff.
             </Text>
-            <Button
-              lineHeight={"1.2"}
-              padding={"1rem 2rem"}
-              maxWidth={"170px"}
-              color={"#151D41"}
-            >
+            <Button padding={"12px 40px"} color={"#151D41"} lineHeight="1.4">
               Send Email
             </Button>
-          </FlexWrapper>
-          <ImageWrapper src={mainImg} borderRadius={"25px"} />
+          </div>
+          <Image src={mainImg} borderRadius={"25px"} />
         </FlexWrapper>
       </Container>
     </StyledMain>
@@ -43,19 +33,21 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   background: ${theme.colors.primaryBq};
-  padding: 47px 0 92px 0;
+  margin: 100px 0 140px;
+  padding: 47px 0 92px;
+  display: flex;
 `;
 
-const Subtitle = styled.span`
-  display: inline-block;
-  font-weight: 400px;
+const SmallText = styled.h2`
+  padding-top: 52px;
+  font-weight: 400;
   font-size: 30px;
   color: #0fbf61;
 `;
 
 const Title = styled.h1`
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 60px;
-  line-height: 70px;
-  margin-bottom: 20px;
+  margin: 7px 0 21px 0;
 `;
