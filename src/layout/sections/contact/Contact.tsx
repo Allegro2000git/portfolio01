@@ -36,7 +36,7 @@ export const Contact = () => {
         </FlexWrapper>
         <Button
           type={"submit"}
-          padding={"1rem 2rem"}
+          padding={"16px 32px"}
           maxWidth={"170px"}
           color={"#151D41"}
         >
@@ -60,7 +60,7 @@ const StyledForm = styled.form`
   flex-direction: column;
   gap: 15px;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 
   textarea {
     resize: none;
@@ -71,7 +71,7 @@ const StyledForm = styled.form`
 const Field = styled.input`
   font-family: "Poppins", sans-serif;
   width: 100%;
-  font-size: 1rem;
+  font-size: 16px;
   border: 1px solid #5eff00;
   border-radius: 10px;
   padding: 10px;

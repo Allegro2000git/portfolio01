@@ -33,7 +33,7 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   background: ${theme.colors.primaryBq};
-  margin: 100px 0 140px;
+  margin-top: 100px;
   padding: 47px 0 92px;
   display: flex;
 `;

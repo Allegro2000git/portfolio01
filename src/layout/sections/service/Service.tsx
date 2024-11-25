@@ -9,6 +9,7 @@ import { Image } from "../../../components/wrapper/Image";
 import proj1 from "../../../assets/images/proj1.webp";
 import proj2 from "../../../assets/images/proj2.webp";
 import proj3 from "../../../assets/images/proj3.webp";
+import proj4 from "../../../assets/images/proj4.webp";
 import { Button } from "../../../components/Button";
 
 export const Service = () => {
@@ -36,14 +37,22 @@ export const Service = () => {
               subtitle={"UX/UI DESIGN"}
               title={"Implement UX design into live and user friendly "}
             />
-            <Image src={proj1} borderRadius={"20px"} />
+            <Image
+              src={proj1}
+              borderRadius={"20px"}
+              shadow="0px 4px 25px 0px #00000040"
+            />
           </FlexWrapper>
           <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
             <DirectionsProjects
               subtitle={"FRONT END DEVELOPMENT"}
               title={"Implement UX design into live and user friendly "}
             />
-            <Image src={proj2} borderRadius={"20px"} />
+            <Image
+              src={proj2}
+              borderRadius={"20px"}
+              shadow="0px 4px 25px 0px #00000040"
+            />
           </FlexWrapper>
           <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
             <DirectionsProjects
@@ -52,14 +61,31 @@ export const Service = () => {
                 "I build landing pages and responsive websites and web App"
               }
             />
-            <Image src={proj3} borderRadius={"20px"} />
+            <Image
+              src={proj3}
+              borderRadius={"20px"}
+              shadow="0px 4px 25px 0px #00000040"
+            />
+          </FlexWrapper>
+          <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
+            <DirectionsProjects
+              subtitle={"CORRECT "}
+              title={
+                "I build landing pages and responsive websites and web App"
+              }
+            />
+            <Image
+              src={proj4}
+              borderRadius={"20px"}
+              shadow="0px 4px 25px 0px #00000040"
+            />
           </FlexWrapper>
         </StyledProjects>
         <Button
-          lineHeight={"1.2"}
-          padding={"1rem 2rem"}
+          padding={"12px 65px"}
           maxWidth={"214px"}
           color={"#151D41"}
+          lineHeight={"1.4"}
         >
           See more
         </Button>
@@ -70,23 +96,21 @@ export const Service = () => {
 
 const StyledService = styled.section`
   background: ${theme.colors.secondaryBq};
-  padding: 140px 0 106px 0;
   text-align: center;
+  margin-bottom: 50px;
 `;
 
 const Subtitle = styled.h2`
-  display: block;
   font-weight: 400;
   font-size: 18px;
   color: #494949;
-  text-align: center;
 `;
 
 const StyledProjects = styled.div`
+  margin: 143px 0 97px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  padding-bottom: 100px;
+  gap: 108px;
   position: relative;
   z-index: 10;
 `;

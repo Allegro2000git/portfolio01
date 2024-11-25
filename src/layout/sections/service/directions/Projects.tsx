@@ -10,15 +10,13 @@ type DirectionProjectsPropsType = {
 export const DirectionsProjects = (props: DirectionProjectsPropsType) => {
   return (
     <StyledDirectionProjects>
-      <Text lineHeight={"1.2"} padding={"50px 0 36px 0"}>
-        {props.subtitle}
-      </Text>
+      <SubTitle>{props.subtitle}</SubTitle>
       <Text
-        fontSize={"2.25rem"}
+        fontSize={"35px"}
         fontWeight={"700"}
-        lineHeight={"1.3"}
+        lineHeight={"1.4"}
         maxWidth={"380px"}
-        padding={"0 0 70px 0"}
+        padding={"36px 0 70px 0"}
       >
         {props.title}
       </Text>
@@ -30,25 +28,38 @@ export const DirectionsProjects = (props: DirectionProjectsPropsType) => {
 const StyledDirectionProjects = styled.div`
   position: relative;
   z-index: 2;
+  text-align: left;
+  padding: 50px 0 0 50px;
 
   &:before {
     content: "";
     position: absolute;
     width: 1116px;
-    height: 431px;
+    height: 400px;
     border: 2px solid ${theme.colors.thirdBq};
     border-radius: 30px;
-    left: -51px;
-    bottom: -90px;
+    left: 0;
+    bottom: -70px;
     z-index: -2;
   }
 `;
 
+const SubTitle = styled.span``;
+
 const Link = styled.a`
-  cursor: pointer;
   font-weight: 500;
   font-size: 20px;
+
   line-height: 1.2;
   padding: 12px;
   color: #000000;
+
+  &::after {
+    content: "--->";
+    margin-left: 15px;
+  }
+
+  &:hover {
+    color: ${theme.colors.thirdBq};
+  }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
 import { theme } from "../../styles/Theme";
-import { Social } from "../../components/socials/Socials";
+import { Social } from "./socials/Socials";
 
 export const Footer = () => {
   return (
@@ -19,6 +19,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background: ${theme.colors.primaryBq};
+  border-top: 2px solid ${theme.colors.thirdBq};
 `;
 
 const Copyright = styled.small`

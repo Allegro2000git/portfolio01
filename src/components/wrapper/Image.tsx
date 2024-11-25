@@ -6,6 +6,7 @@ type ImageWrapperPropsType = {
   objectFit?: string;
   padding?: string;
   borderRadius?: string;
+  shadow?: string;
 };
 
 export const Image = styled.img<ImageWrapperPropsType>`
@@ -16,4 +17,5 @@ export const Image = styled.img<ImageWrapperPropsType>`
   object-fit: ${(props) => props.objectFit || "cover"};
   padding: ${(props) => props.padding || "undefined"};
   border-radius: ${(props) => props.borderRadius || "undefined"};
+  box-shadow: ${(props) => props.shadow || "undefined"};
 `;

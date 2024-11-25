@@ -13,26 +13,25 @@ type DirectionsPropsType = {
 export const Direction = (props: DirectionsPropsType) => {
   return (
     <StyledDirection>
-      <FlexWrapper align={"start"} justify={"space-between"}>
+      <FlexWrapper align={"center"} justify={"space-between"}>
         <IconWrapper>
           <Icon iconid={props.icon} />
         </IconWrapper>
         <div>
           <Text
             fontWeight={"500"}
-            fontSize={"1.25rem"}
+            fontSize={"20px"}
             lineHeight={"1.3"}
-            color={" #494949"}
-            padding={"0 0 8px 30px"}
+            color={"#494949"}
+            padding={"0 0 8px 0"}
           >
             {props.number}
           </Text>
           <Text
             fontWeight={"500"}
-            fontSize={"1.25rem"}
+            fontSize={"20px"}
             lineHeight={"1.3"}
             color={"#000000"}
-            padding={"0 0 0 30px"}
           >
             {props.title}
           </Text>
@@ -42,13 +41,11 @@ export const Direction = (props: DirectionsPropsType) => {
   );
 };
 
-const StyledDirection = styled.section`
-  margin-bottom: 120px;
-`;
+const StyledDirection = styled.section``;
 
 const IconWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-right: 30px;
+  padding: 25px;
+  border-radius: 20px;
   background-color: ${theme.colors.primaryBq};
 `;

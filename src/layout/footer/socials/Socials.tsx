@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { Icon } from "../icon/Icon";
+import { Icon } from "../../../components/icon/Icon";
 
-type SocialItemType = {
+type SocialItemPropsType = {
   icon: string;
   url: string;
   viewbox?: string;
 };
 
-const socialItems: Array<SocialItemType> = [
+const socialItems: Array<SocialItemPropsType> = [
   { icon: "insta", url: "https://www.instagram.com/" },
   { icon: "whatsapp", url: "https://www.whatsapp.com/" },
   { icon: "telegram", url: "https://web.telegram.org/k/" },
@@ -21,11 +21,7 @@ export const Social = () => {
           return (
             <SocialItem key={index}>
               {" "}
-              <SocialLink
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <SocialLink href={item.url} target="_blank">
                 <Icon iconid={item.icon} viewBox={"-25 -20 80 70"} />
               </SocialLink>
             </SocialItem>
