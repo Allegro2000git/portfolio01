@@ -5,6 +5,7 @@ type SectionTitlePropsType = {
   textAlign?: string;
   fontSize?: string;
   fontWeight?: string;
+  margin?: string;
 };
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
@@ -13,4 +14,5 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   text-align: ${(props) => props.textAlign || "center"};
   font-size: ${(props) => props.fontSize || "40px"};
   font-weight: ${(props) => props.fontWeight || "700"};
+  margin: ${(props) => props.margin || "undefined"};
 `;

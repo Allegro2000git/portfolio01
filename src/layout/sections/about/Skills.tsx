@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { S } from "./About_Styles";
 import { Icon } from "../../../components/icon/Icon";
 
 type SkillsPropsType = {
@@ -15,34 +15,19 @@ const skills: Array<SkillsPropsType> = [
   { icon: "git", title: "Git" },
 ];
 
-export const SkillsList = () => {
+export const Skills: React.FC = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <ul>
         {skills.map((item, index) => {
           return (
             <li key={index}>
               <Icon iconid={item.icon} viewBox={"0 0 120 110"} />
-              <Title>{item.title}</Title>
+              <S.Title>{item.title}</S.Title>
             </li>
           );
         })}
       </ul>
-    </StyledSkills>
+    </S.Skills>
   );
 };
-
-const StyledSkills = styled.div`
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: left;
-    justify-content: space-between;
-  }
-`;
-
-const Title = styled.p`
-  text-align: center;
-  font-weight: 500;
-`;

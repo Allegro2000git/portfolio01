@@ -1,30 +1,28 @@
-import styled from "styled-components";
-import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
+import { S } from "./About_Styles";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import aboutImg from "../../../assets/images/aboutImg.webp";
 import { Image } from "../../../components/wrapper/Image";
-import { font } from "../../../styles/CommonFont";
-import { SkillsList } from "./Aboutskills";
+import { Skills } from "./Skills";
 
-export const About = () => {
+export const About: React.FC = () => {
   return (
-    <StyledAbout>
+    <S.About>
       <Container>
-        <SectionTitle padding={"0 0 37px 0;"}>About Me</SectionTitle>
+        <SectionTitle margin={"0 0 37px 0"}>About Me</SectionTitle>
         <FlexWrapper justify={"space-around"} wrap={"wrap"}>
-          <ImageWrapper>
+          <S.ImageWrapper>
             <Image
               src={aboutImg}
               borderRadius={"50px"}
               width={"280px"}
               height={"420px"}
-              padding="0 20px 0 0"
+              padding={"0 20px 0 0"}
             />
-          </ImageWrapper>
+          </S.ImageWrapper>
           <FlexWrapper direction={"column"} align={"start"}>
-            <Text>
+            <S.Text>
               Hello! My name is Fabio Scaletta and I am a{" "}
               <span>UX/UI designer</span> and <span>Front End Developer</span>.
               I enjoy creating things that live on the internet. An experienced
@@ -34,50 +32,14 @@ export const About = () => {
               software engineering, creating dynamic and beautiful web pages. I
               have been in the field for nearly 5 years, and have been loving
               every minute of it.
-            </Text>
-            <Text>
+            </S.Text>
+            <S.Text>
               Here are a few technologies I’ve been working with recently:
-            </Text>
-            <SkillsList />
+            </S.Text>
+            <Skills />
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-    </StyledAbout>
+    </S.About>
   );
 };
-
-const StyledAbout = styled.section`
-  margin: 60px 0 90px;
-  background-color: ${theme.colors.secondaryBq};
-  display: flex;
-  span {
-    color: ${theme.colors.thirdBq};
-  }
-`;
-
-const Text = styled.p`
-  max-width: 551px;
-  ${font({ lineHeight: 1.3 })}
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    height: 420px;
-    width: 280px;
-    border: 2px solid ${theme.colors.thirdBq};
-
-    position: absolute;
-    border-radius: 20px;
-    top: 38px;
-    left: -49px;
-    z-index: -1;
-    @media ${theme.media.mobile} {
-      display: none;
-    }
-  }
-`;
