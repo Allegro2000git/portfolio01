@@ -1,42 +1,38 @@
-import styled from "styled-components";
+import React from "react";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
-import { theme } from "../../styles/Theme";
+import { S } from "./Header_Styles";
 import { Link } from "../../components/logo/Link";
-import { HeaderMenu } from "./headermenu/HeaderMenu";
-import { Button } from "../../components/Button";
+import { DesktopMenu } from "./headerMenu/desktopmenu/DesktopMenu";
+import { MobileMenu } from "./headerMenu/mobilemenu/MobileMenu";
 
 const headerItems = ["Home", "About", "Service", "Contact"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 768;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
           <Link />
-          <FlexWrapper justify="space-around" align={"center"} wrap={"wrap"}>
-            <HeaderMenu menuItems={headerItems} />
-            <Button
-              lineHeight={"1.2"}
-              padding={"1rem 2rem"}
-              maxWidth={"170px"}
-              color={"#151D41"}
-            >
-              Resume
-            </Button>
+          <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
+            {width < breakpoint ? (
+              <MobileMenu menuItems={headerItems} />
+            ) : (
+              <DesktopMenu menuItems={headerItems} />
+            )}
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-  background: ${theme.colors.headerBq};
-  padding: 15px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-`;

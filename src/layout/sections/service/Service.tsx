@@ -69,7 +69,7 @@ export const Service = () => {
           </FlexWrapper>
           <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
             <DirectionsProjects
-              subtitle={"CORRECT "}
+              subtitle={"CORRECT STYLES"}
               title={
                 "I build landing pages and responsive websites and web App"
               }
@@ -107,10 +107,15 @@ const Subtitle = styled.h2`
 `;
 
 const StyledProjects = styled.div`
-  margin: 143px 0 97px;
+  margin: 45px 0 50px;
   display: flex;
   flex-direction: column;
-  gap: 108px;
-  position: relative;
-  z-index: 10;
+  gap: 38px;
+
+  ${FlexWrapper} {
+    border: 2px solid ${theme.colors.thirdBq};
+    padding: 10px;
+    border-radius: 30px;
+    background-color: ${theme.colors.thirdBq};
+  }
 `;

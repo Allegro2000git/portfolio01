@@ -36,10 +36,13 @@ const StyledSkills = styled.div`
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
-    align-items: center;
+    gap: 15px;
+    align-items: left;
     justify-content: space-between;
   }
 `;
 
-const Title = styled.p``;
+const Title = styled.p`
+  text-align: center;
+  font-weight: 500;
+`;

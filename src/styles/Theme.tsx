@@ -6,8 +6,13 @@ export const theme = {
     thirdBq: " #0FBF61",
     fourthBq: "#2D4CFF21",
 
-    headerBq: "#4c641d",
+    headerBq: "#475132",
 
     font: "#FFFFFF",
+  },
+
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
   },
 };

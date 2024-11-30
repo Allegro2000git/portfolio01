@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Text } from "../../../../components/Text";
+import { font } from "../../../../styles/CommonFont";
 import { theme } from "../../../../styles/Theme";
 
 type DirectionProjectsPropsType = {
@@ -11,40 +11,22 @@ export const DirectionsProjects = (props: DirectionProjectsPropsType) => {
   return (
     <StyledDirectionProjects>
       <SubTitle>{props.subtitle}</SubTitle>
-      <Text
-        fontSize={"35px"}
-        fontWeight={"700"}
-        lineHeight={"1.4"}
-        maxWidth={"380px"}
-        padding={"36px 0 70px 0"}
-      >
-        {props.title}
-      </Text>
+      <Text>{props.title}</Text>
       <Link href={"#"}>Learn more</Link>
     </StyledDirectionProjects>
   );
 };
 
 const StyledDirectionProjects = styled.div`
-  position: relative;
-  z-index: 2;
   text-align: left;
-  padding: 50px 0 0 50px;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 1116px;
-    height: 400px;
-    border: 2px solid ${theme.colors.thirdBq};
-    border-radius: 30px;
-    left: 0;
-    bottom: -70px;
-    z-index: -2;
-  }
 `;
 
 const SubTitle = styled.span``;
+
+const Text = styled.p`
+  ${font({ lineHeight: 1.4, weight: 700, Fmax: 35, Fmin: 25 })};
+  max-width: 380px;
+`;
 
 const Link = styled.a`
   font-weight: 500;
@@ -60,6 +42,6 @@ const Link = styled.a`
   }
 
   &:hover {
-    color: ${theme.colors.thirdBq};
+    color: ${theme.colors.font};
   }
 `;

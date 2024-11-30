@@ -5,7 +5,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import aboutImg from "../../../assets/images/aboutImg.webp";
 import { Image } from "../../../components/wrapper/Image";
-import { Text } from "../../../components/Text";
+import { font } from "../../../styles/CommonFont";
 import { SkillsList } from "./Aboutskills";
 
 export const About = () => {
@@ -13,18 +13,18 @@ export const About = () => {
     <StyledAbout>
       <Container>
         <SectionTitle padding={"0 0 37px 0;"}>About Me</SectionTitle>
-        <FlexWrapper justify={"space-around"}>
+        <FlexWrapper justify={"space-around"} wrap={"wrap"}>
           <ImageWrapper>
             <Image
               src={aboutImg}
-              borderRadius={"25px"}
+              borderRadius={"50px"}
               width={"280px"}
               height={"420px"}
               padding="0 20px 0 0"
             />
           </ImageWrapper>
           <FlexWrapper direction={"column"} align={"start"}>
-            <Text lineHeight={"1.6"} maxWidth={"551px"}>
+            <Text>
               Hello! My name is Fabio Scaletta and I am a{" "}
               <span>UX/UI designer</span> and <span>Front End Developer</span>.
               I enjoy creating things that live on the internet. An experienced
@@ -35,7 +35,7 @@ export const About = () => {
               have been in the field for nearly 5 years, and have been loving
               every minute of it.
             </Text>
-            <Text padding="32px 0 0 0">
+            <Text>
               Here are a few technologies I’ve been working with recently:
             </Text>
             <SkillsList />
@@ -47,12 +47,17 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-  margin: 140px 0;
+  margin: 60px 0 90px;
   background-color: ${theme.colors.secondaryBq};
   display: flex;
   span {
-    color: #0fbf61;
+    color: ${theme.colors.thirdBq};
   }
+`;
+
+const Text = styled.p`
+  max-width: 551px;
+  ${font({ lineHeight: 1.3 })}
 `;
 
 const ImageWrapper = styled.div`
@@ -64,12 +69,15 @@ const ImageWrapper = styled.div`
     position: absolute;
     height: 420px;
     width: 280px;
-    border: 3px solid ${theme.colors.thirdBq};
+    border: 2px solid ${theme.colors.thirdBq};
 
     position: absolute;
     border-radius: 20px;
     top: 38px;
     left: -49px;
     z-index: -1;
+    @media ${theme.media.mobile} {
+      display: none;
+    }
   }
 `;

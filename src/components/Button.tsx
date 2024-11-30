@@ -14,6 +14,7 @@ export const Button = styled.button<ButtonPropsType>`
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
+  white-space: nowrap;
   padding: ${(props) => props.padding || "undefined"};
   line-height: ${(props) => props.lineHeight || "1.2"};
   max-width: ${(props) => props.maxWidth || "undefined"};
