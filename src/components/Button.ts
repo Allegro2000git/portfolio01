@@ -21,6 +21,7 @@ export const Button = styled.button<ButtonPropsType>`
   border-radius: ${(props) => props.borderRadiud || "50px"};
   color: ${(props) => props.color || "undefined"};
   background: ${(props) => props.background || theme.colors.thirdBq};
+
   &:hover {
     background-color: #717171;
     color: ${theme.colors.font};

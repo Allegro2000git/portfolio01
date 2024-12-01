@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -14,7 +15,6 @@ export const GlobalStyles = createGlobalStyle`
    font-size: 16px;
 }
 
-
 body {
 line-height: 1.2;
 font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,6 +23,7 @@ font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
+
 
 a {
 	text-decoration: none;

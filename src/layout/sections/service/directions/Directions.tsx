@@ -1,8 +1,6 @@
-import styled from "styled-components";
+import { S } from "../Service_Styles";
 import { Icon } from "../../../../components/icon/Icon";
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper";
-import { font } from "../../../../styles/CommonFont";
-import { theme } from "../../../../styles/Theme";
 
 type DirectionsPropsType = {
   icon: string;
@@ -10,31 +8,20 @@ type DirectionsPropsType = {
   title: string;
 };
 
-export const Direction = (props: DirectionsPropsType) => {
+export const Direction: React.FC<DirectionsPropsType> = (
+  props: DirectionsPropsType
+) => {
   return (
-    <StyledDirection>
+    <S.Direction>
       <FlexWrapper align={"center"} justify={"space-between"}>
-        <IconWrapper>
+        <S.IconWrapper>
           <Icon iconid={props.icon} />
-        </IconWrapper>
+        </S.IconWrapper>
         <div>
-          <Text>{props.number}</Text>
-          <Text>{props.title}</Text>
+          <S.Text>{props.number}</S.Text>
+          <S.Text>{props.title}</S.Text>
         </div>
       </FlexWrapper>
-    </StyledDirection>
+    </S.Direction>
   );
 };
-
-const StyledDirection = styled.section``;
-
-const IconWrapper = styled.div`
-  padding: 25px;
-  margin: 15px;
-  border-radius: 20px;
-  background-color: ${theme.colors.fourthBq};
-`;
-
-const Text = styled.p`
-  ${font({ weight: 500, lineHeight: 1.3, Fmax: 20, Fmin: 20 })}
-`;

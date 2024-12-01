@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../styles/Theme";
 
 type SectionTitlePropsType = {
   padding?: string;
@@ -15,4 +16,9 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   font-size: ${(props) => props.fontSize || "40px"};
   font-weight: ${(props) => props.fontWeight || "700"};
   margin: ${(props) => props.margin || "undefined"};
+
+  @media ${theme.media.mobile} {
+    margin: 0;
+    padding: 20px 0;
+  }
 `;

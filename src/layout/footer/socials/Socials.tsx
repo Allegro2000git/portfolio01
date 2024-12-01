@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { S } from "../Footer_Styles";
 import { Icon } from "../../../components/icon/Icon";
 
 type SocialItemPropsType = {
@@ -13,36 +13,21 @@ const socialItems: Array<SocialItemPropsType> = [
   { icon: "telegram", url: "https://web.telegram.org/k/" },
 ];
 
-export const Social = () => {
+export const Social: React.FC = () => {
   return (
-    <StyledSocial>
+    <S.Social>
       <ul>
         {socialItems.map((item, index) => {
           return (
-            <SocialItem key={index}>
+            <S.Item key={index}>
               {" "}
-              <SocialLink href={item.url} target="_blank">
+              <S.Link href={item.url} target="_blank">
                 <Icon iconid={item.icon} viewBox={"-25 -20 80 70"} />
-              </SocialLink>
-            </SocialItem>
+              </S.Link>
+            </S.Item>
           );
         })}
       </ul>
-    </StyledSocial>
+    </S.Social>
   );
 };
-
-const StyledSocial = styled.nav`
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-between;
-  }
-`;
-
-const SocialItem = styled.li`
-  cursor: pointer;
-`;
-
-const SocialLink = styled.a``;

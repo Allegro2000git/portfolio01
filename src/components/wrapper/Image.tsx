@@ -13,17 +13,24 @@ type ImageWrapperPropsType = {
 export const Image = styled.img<ImageWrapperPropsType>`
   position: relative;
   object-fit: cover;
-  margin: 15px 0 10px;
+  margin: 25px 15px;
   z-index: 3;
+
   width: ${(props) => props.width || "548px"};
   height: ${(props) => props.height || "394px"};
   object-fit: ${(props) => props.objectFit || "cover"};
   padding: ${(props) => props.padding || "undefined"};
   border-radius: ${(props) => props.borderRadius || "undefined"};
   box-shadow: ${(props) => props.shadow || "undefined"};
+  border-radius: ${(props) => props.borderRadius || "undefined"};
 
   @media ${theme.media.mobile} {
     width: 360px;
     height: 340px;
+  }
+
+  @media screen and (max-width: 454px) {
+    width: 285px;
+    height: 260px;
   }
 `;

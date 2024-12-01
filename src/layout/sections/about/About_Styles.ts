@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/CommonFont";
 
-
+//Common
 
 const About = styled.section`
   margin: 60px 0 90px;
@@ -10,6 +10,10 @@ const About = styled.section`
   display: flex;
   span {
     color: ${theme.colors.thirdBq};
+  }
+
+  @media ${theme.media.mobile} {
+	margin: 0;
   }
 `;
 
