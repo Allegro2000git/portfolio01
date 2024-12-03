@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/CommonFont";
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
+import { Image } from "../../../components/wrapper/Image";
 
 //Directions
 
-const Direction = styled.section``;
+const Direction = styled.div`
+`;
 
 const IconWrapper = styled.div`
   padding: 25px;
-  margin: 10px;
+  margin: 0 30px 0 0;
   border-radius: 20px;
   background-color: ${theme.colors.fourthBq};
 `;
@@ -22,29 +23,29 @@ const Text = styled.p`
 //Project
 
 const Project = styled.div`
-  margin: 45px 0 50px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-
-  ${FlexWrapper} {
-    border: 2px solid ${theme.colors.thirdBq};
-    padding: 15px;
-    border-radius: 30px;
-    background-color: ${theme.colors.thirdBq};
-  }
+	padding: 5px;
+	margin: 163px 0 25px;
+	text-align: left;
+	border: 2px solid silver;
+	border-radius: 30px;
+   background-color: ${theme.colors.font};
+	${Image} {
+		transform: translateY(-43px)
+	}
 
   @media screen and (max-width: 1022px) {
     text-align: center;
   }
+
+ 
 `;
 
-const Subtitle = styled.h2`
+const Subtitle = styled.h3`
 color: #494949;
 `;
 
 const Title = styled.h2`
-  ${font({ lineHeight: 1.4, weight: 700, Fmax: 35, Fmin: 25 })};
+  ${font({ weight: 700, Fmax: 35, Fmin: 25 })};
   max-width: 380px;
   margin: 36px 0 70px;
 
@@ -58,7 +59,6 @@ const Link = styled.a`
   font-weight: 500;
   font-size: 20px;
 
-  padding: 12px;
   color: #000000;
   border: 1px solid ${theme.colors.font};
   background-color: ${theme.colors.font};

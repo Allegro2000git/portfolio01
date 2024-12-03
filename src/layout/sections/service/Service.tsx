@@ -13,7 +13,12 @@ export const Service: React.FC = () => {
       <Container>
         <S.Smalltitle>My service</S.Smalltitle>
         <SectionTitle margin={"25px 0 30px"}>What I Do</SectionTitle>
-        <FlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"}>
+        <FlexWrapper
+          justify={"space-between"}
+          align={"center"}
+          wrap={"wrap"}
+          gap="25px"
+        >
           <Direction icon={"code"} number={"01"} title={"UX/UI Design"} />
           <Direction
             icon={"ux"}

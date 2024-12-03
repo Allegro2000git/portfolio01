@@ -5,7 +5,7 @@ import { theme } from "../../styles/Theme";
 // Common
 const Footer = styled.footer`
   background: ${theme.colors.primaryBq};
-  border-top: 2px solid ${theme.colors.thirdBq};
+  border-top: 4px solid ${theme.colors.thirdBq};
   padding: 15px 0 0;
   text-align: center;
 `;

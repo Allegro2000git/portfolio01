@@ -4,8 +4,7 @@ import { theme } from "../../styles/Theme";
 const Header = styled.header`
   background: ${theme.colors.headerBq};
   position: fixed;
-  padding: 10px 0;
-  opacity: 0.95;
+  padding-top: 10px;
   top: 0;
   left: 0;
   right: 0;

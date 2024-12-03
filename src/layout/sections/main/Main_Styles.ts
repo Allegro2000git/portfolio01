@@ -4,8 +4,7 @@ import { font } from "../../../styles/CommonFont";
 
 const Main = styled.section`
   background: ${theme.colors.primaryBq};
-  margin-top: 90px;
-  padding: 50px 0;
+  padding: 100px 0 50px;
 `;
 
 const SmallText = styled.h2`

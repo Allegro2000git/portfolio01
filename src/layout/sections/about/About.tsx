@@ -15,10 +15,9 @@ export const About: React.FC = () => {
           <S.ImageWrapper>
             <Image
               src={aboutImg}
-              borderRadius={"50px"}
+              borderRadius={"20px"}
               width={"280px"}
               height={"420px"}
-              padding={"0 20px 0 0"}
             />
           </S.ImageWrapper>
           <FlexWrapper direction={"column"} align={"start"}>

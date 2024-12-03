@@ -25,6 +25,10 @@ const Text = styled.p`
   &:nth-child(2) {
     margin: 30px 0 15px;
   }
+
+  @media screen and (max-width: 881px) {
+		padding-top: 25px;
+	 }
 `;
 
 const ImageWrapper = styled.div`
@@ -35,18 +39,25 @@ const ImageWrapper = styled.div`
     content: "";
     position: absolute;
     height: 420px;
-    width: 250px;
-    border: 2px solid ${theme.colors.thirdBq};
+    width: 280px;
+    border: 3px solid ${theme.colors.thirdBq};
 
     position: absolute;
     border-radius: 20px;
-    top: -18px;
-    right: 0px;
+    top: 38px;
+    left: -49px;
     z-index: -1;
+
+	 @media screen and (max-width: 881px) {
+		top: 15px;
+		left: -20px;
+	 }
+
     @media ${theme.media.mobile} {
       display: none;
     }
-  }
+
+}
 `;
 
 // map Skills

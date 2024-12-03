@@ -29,7 +29,7 @@ const MobileMenu = styled.nav``;
 const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
   position: fixed;
   background-color: ${theme.colors.headerBq};
-  opacity: 0.95;
+  opacity: 0.9;
   top: 96px;
   padding: 10px 0;
   left: 0;
@@ -65,10 +65,11 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
     display: block;
     width: 36px;
     height: 2px;
-    background-color: ${theme.colors.font};
+    background-color: ${theme.colors.headerBq};
     position: absolute;
     left: 40px;
     bottom: 50px;
+
 
     ${(props) =>
       props.isOpen &&

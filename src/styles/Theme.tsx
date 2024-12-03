@@ -6,7 +6,7 @@ export const theme = {
     thirdBq: " #0FBF61",
     fourthBq: "#2D4CFF21",
 
-    headerBq: "#475132",
+    headerBq: "#6e7f49",
 
     font: "#FFFFFF",
   },

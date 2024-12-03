@@ -19,6 +19,6 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
 
   @media ${theme.media.mobile} {
     margin: 0;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 `;
