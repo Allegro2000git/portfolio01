@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
+import { animateScroll as scroll } from "react-scroll";
 
 export const GoTopBtn = () => {
   return (
-    <StyledGoTopBtn>
+    <StyledGoTopBtn
+      onClick={() => {
+        scroll.scrollToTop();
+      }}
+    >
       <Icon
         iconid={"upArrow"}
         height={"50"}

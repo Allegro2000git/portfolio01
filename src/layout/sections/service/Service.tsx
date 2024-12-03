@@ -10,7 +10,7 @@ import { Slider } from "./projects/Slider";
 
 export const Service: React.FC = () => {
   return (
-    <S.Service>
+    <S.Service id={"service"}>
       <Container>
         <S.Smalltitle>My service</S.Smalltitle>
         <SectionTitle margin={"25px 0 30px"}>What I Do</SectionTitle>

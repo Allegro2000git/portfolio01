@@ -1,15 +1,16 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
 //Common Menu
 const MenuItem = styled.li``;
 
-const Link = styled.a`
+const LinkNav = styled(Link)`
   font-weight: 500;
   font-size: 18px;
   color: ${theme.colors.thirdBq};
 
-  &:hover {
+  &:hover, &.active {
     color: ${theme.colors.font};
   }
 `;
@@ -114,5 +115,5 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
 
 
 export const S = {
-	MenuItem, Link, DesktopMenu, MobileMenu, MobileMenuPopUp, Burgerbutton
+	MenuItem, LinkNav, DesktopMenu, MobileMenu, MobileMenuPopUp, Burgerbutton
 }

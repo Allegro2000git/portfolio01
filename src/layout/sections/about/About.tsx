@@ -8,7 +8,7 @@ import { Skills } from "./Skills";
 
 export const About: React.FC = () => {
   return (
-    <S.About>
+    <S.About id={"about"}>
       <Container>
         <SectionTitle margin={"0 0 37px 0"}>About Me</SectionTitle>
         <FlexWrapper justify={"space-around"} wrap={"wrap"}>

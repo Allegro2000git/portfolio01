@@ -7,7 +7,7 @@ import { Button } from "../../../components/Button";
 
 export const Main: React.FC = () => {
   return (
-    <S.Main>
+    <S.Main id={"home"}>
       <Container>
         <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
           <div>

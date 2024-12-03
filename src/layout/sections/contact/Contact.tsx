@@ -6,7 +6,7 @@ import { Button } from "../../../components/Button";
 
 export const Contact: React.FC = () => {
   return (
-    <S.Contact>
+    <S.Contact id={"contact"}>
       <Container>
         <SectionTitle padding={"0 0 50px 0"}>Contact</SectionTitle>
         <FlexWrapper justify={"center"}>
