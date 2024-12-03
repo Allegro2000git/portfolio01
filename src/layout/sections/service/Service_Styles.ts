@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/CommonFont";
-import { Image } from "../../../components/wrapper/Image";
 
 //Directions
 
@@ -20,25 +19,24 @@ const Text = styled.p`
   text-align: left;
 `;
 
-//Project
+//Slider
 
 const Project = styled.div`
-	padding: 5px;
-	margin: 163px 0 25px;
+	padding: 20px;
+	margin: 50px 0 25px;
 	text-align: left;
 	border: 2px solid silver;
 	border-radius: 30px;
    background-color: ${theme.colors.font};
-	${Image} {
-		transform: translateY(-43px)
-	}
-
-  @media screen and (max-width: 1022px) {
-    text-align: center;
-  }
-
- 
 `;
+
+const ContentText = styled.div`
+	margin-bottom: 20px;
+	
+@media screen and (max-width: 1019px){
+	text-align: center;
+}
+`
 
 const Subtitle = styled.h3`
 color: #494949;
@@ -50,7 +48,7 @@ const Title = styled.h2`
   margin: 36px 0 70px;
 
   @media screen and (max-width: 1022px) {
-    margin: 20px 0 40px;
+    margin: 20px 0 10px;
     text-align: center;
   }
 `;
@@ -77,7 +75,6 @@ const Link = styled.a`
 //Common
 
 const Service = styled.section`
-  background: ${theme.colors.secondaryBq};
   text-align: center;
   margin: 25px 0;
 `;
@@ -91,5 +88,5 @@ const Smalltitle = styled.h3`
 
 
 export const S = {
-	Direction, IconWrapper, Text, Project, Subtitle, Title, Link, Service, Smalltitle
+	Direction, IconWrapper, Text, Project, ContentText, Subtitle, Title, Link, Service, Smalltitle
 }

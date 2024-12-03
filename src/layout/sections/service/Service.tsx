@@ -1,11 +1,12 @@
+import React from "react";
 import { S } from "./Service_Styles";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Direction } from "./directions/Directions";
 import { Container } from "../../../components/Container";
 import { Button } from "../../../components/Button";
-import { Projects } from "./projects/Projects";
-import React from "react";
+
+import { Slider } from "./projects/Slider";
 
 export const Service: React.FC = () => {
   return (
@@ -31,7 +32,7 @@ export const Service: React.FC = () => {
             title={"Responsive Design"}
           />
         </FlexWrapper>
-        <Projects />
+        <Slider />
         <Button
           padding={"12px 65px"}
           maxWidth={"214px"}

@@ -1,8 +1,8 @@
 import { Icon } from "../icon/Icon";
 
-export const Link = () => {
+export const Link: React.FC = () => {
   return (
-    <a href="#">
+    <a onClick={() => {}}>
       <Icon iconid={"logo"} />
     </a>
   );

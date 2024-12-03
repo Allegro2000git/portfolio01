@@ -14,7 +14,7 @@ type ImageWrapperPropsType = {
 export const Image = styled.img<ImageWrapperPropsType>`
   position: relative;
   object-fit: cover;
-  z-index: 3;
+  z-index: 5;
   width: ${(props) => props.width || "548px"};
   height: ${(props) => props.height || "394px"};
   object-fit: ${(props) => props.objectFit || "cover"};

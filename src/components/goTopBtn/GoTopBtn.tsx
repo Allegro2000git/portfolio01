@@ -3,20 +3,21 @@ import { Icon } from "../icon/Icon";
 
 export const GoTopBtn = () => {
   return (
-    <StyledgoTopBtn>
+    <StyledGoTopBtn>
       <Icon
         iconid={"upArrow"}
         height={"50"}
         width={"40"}
-        viewBox={"0 0 620 400"}
+        viewBox={"0 0 820 400"}
       />
-    </StyledgoTopBtn>
+    </StyledGoTopBtn>
   );
 };
 
-const StyledgoTopBtn = styled.button`
-  padding: 10px;
+const StyledGoTopBtn = styled.button`
+  padding: 5px;
   position: fixed;
-  right: 30px;
+  right: 0px;
   bottom: 10px;
+  z-index: 10000;
 `;
