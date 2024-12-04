@@ -31,7 +31,7 @@ const Field = styled.input`
   font-family: "Poppins", sans-serif;
   width: 100%;
   font-size: 16px;
-  border: 1px solid #5eff00;
+  border: 1px solid grey;
   border-radius: 10px;
   padding: 10px;
   color: #000000;

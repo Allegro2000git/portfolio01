@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/CommonFont";
 
+
 //Directions
 
 const Direction = styled.div`
@@ -23,11 +24,12 @@ const Text = styled.p`
 
 const Project = styled.div`
 	padding: 20px;
-	margin: 50px 0 25px;
+	margin: 75px 0 25px;
 	text-align: left;
 	border: 2px solid silver;
 	border-radius: 30px;
    background-color: ${theme.colors.font};
+
 `;
 
 const ContentText = styled.div`
