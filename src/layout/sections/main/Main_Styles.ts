@@ -4,7 +4,7 @@ import { font } from "../../../styles/CommonFont";
 
 const Main = styled.section`
   background: ${theme.colors.primaryBq};
-  padding: 100px 0 50px;
+  padding: 85px 0 50px;
 `;
 
 const SmallText = styled.h2`
@@ -28,6 +28,9 @@ const Text = styled.p`
   margin-bottom: 32px;
 `;
 
+const Flag = styled.span`
+`
+
 export const S = {
-	Main, SmallText, Title, Text
+	Main, SmallText, Title, Text, Flag
 }

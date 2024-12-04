@@ -30,7 +30,7 @@ export const Menu: React.FC = () => {
               spy={true}
               to={item.href}
               activeClass={"active"}
-              offset={-290}
+              offset={-320}
             >
               {item.title}
             </S.LinkNav>

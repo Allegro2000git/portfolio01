@@ -11,7 +11,7 @@ const LinkNav = styled(Link)`
   color: ${theme.colors.thirdBq};
 
   &:hover, &.active {
-    color: ${theme.colors.font};
+    color: #000000;
   }
 `;
 
@@ -29,12 +29,11 @@ const MobileMenu = styled.nav``;
 
 const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  background-color: ${theme.colors.headerBq};
-  opacity: 0.9;
-  top: 96px;
-  padding: 10px 0;
+  background-color: rgba(206,212,211,0.8);
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   z-index: 999;
   display: none;
 
@@ -66,7 +65,7 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
     display: block;
     width: 36px;
     height: 2px;
-    background-color: ${theme.colors.headerBq};
+    background-color: ${theme.colors.thirdBq};
     position: absolute;
     left: 40px;
     bottom: 50px;
@@ -75,7 +74,7 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
     ${(props) =>
       props.isOpen &&
       css<{ isOpen: boolean }>`
-        background-color: ${theme.colors.headerBq};
+        background-color: ${theme.colors.primaryBq};
       `}
 
     &::before {
@@ -83,7 +82,7 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 2px;
-      background-color: ${theme.colors.font};
+      background-color: #000000;
       position: absolute;
       transform: translateY(-10px);
 
@@ -99,7 +98,7 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 24px;
       height: 2px;
-      background-color: ${theme.colors.font};
+      background-color: #000000;
       position: absolute;
       transform: translateY(10px);
 

@@ -4,6 +4,7 @@ import { S } from "../Service_Styles";
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper";
 import { Image } from "../../../../components/wrapper/Image";
 import { projectsData } from "./Projects";
+import "../../../../styles/sliderCustom.css";
 
 type SlidePropsType = {
   subtitle: string;

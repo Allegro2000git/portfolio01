@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
 
 const Header = styled.header`
-  background: ${theme.colors.headerBq};
   position: fixed;
   padding-top: 10px;
   top: 0;

@@ -13,22 +13,24 @@ const About = styled.section`
   }
 
   @media ${theme.media.mobile} {
-	margin: 0;
+	margin-bottom: 50px;
   }
 `;
 
 const Text = styled.p`
   max-width: 551px;
-  font-size: 18px;
-  ${font({ lineHeight: 1.4, color: "#494949" })}
 
-  &:nth-child(2) {
-    margin: 30px 0 15px;
-  }
+  ${font({ lineHeight: 1.4, color: "#494949", Fmax: 18, Fmin: 16 })};
+  
 
   @media screen and (max-width: 881px) {
-		padding-top: 25px;
-	 }
+padding-top: 25px;
+}
+
+&:nth-child(2) {
+	margin: 10px 0 15px;
+}
+
 `;
 
 const ImageWrapper = styled.div`
@@ -42,7 +44,6 @@ const ImageWrapper = styled.div`
     width: 280px;
     border: 3px solid ${theme.colors.thirdBq};
 
-    position: absolute;
     border-radius: 20px;
     top: 38px;
     left: -49px;
@@ -76,7 +77,6 @@ const Title = styled.p`
   text-align: center;
   font-weight: 500;
 `;
-
 
 export const S = {
 	About, Text, ImageWrapper, Skills, Title
