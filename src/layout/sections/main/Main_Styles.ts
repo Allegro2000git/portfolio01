@@ -4,7 +4,11 @@ import { font } from "../../../styles/CommonFont";
 
 const Main = styled.section`
   background: ${theme.colors.primaryBq};
-  padding: 85px 0 50px;
+  padding: 132px 0 50px;
+
+  @media  ${theme.media.mobile} {
+		padding-top: 100px;
+	 }
 `;
 
 const SmallText = styled.h2`

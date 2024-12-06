@@ -4,8 +4,9 @@ import { theme } from "../../../styles/Theme";
 
 const Contact = styled.section`
   background: ${theme.colors.primaryBq};
-  padding: 50px 0;
-  text-align: center;
+  padding: 25px 0 50px;
+ 
+
 
   @media ${theme.media.mobile} {
     padding: 10px 0;
@@ -18,8 +19,8 @@ const Form = styled.form`
   width: 100%;
   flex-direction: column;
   gap: 15px;
-  justify-content: center;
-  margin-bottom: 32px;
+  align-items: center;
+  margin: 0 auto;
 
   textarea {
     resize: none;

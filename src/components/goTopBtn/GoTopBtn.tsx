@@ -1,21 +1,34 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { animateScroll as scroll } from "react-scroll";
+import { useEffect, useState } from "react";
 
 export const GoTopBtn = () => {
+  const [showBtn, setshowBtn] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 200 ? setshowBtn(true) : setshowBtn(false);
+    });
+  }, []);
+
   return (
-    <StyledGoTopBtn
-      onClick={() => {
-        scroll.scrollToTop();
-      }}
-    >
-      <Icon
-        iconid={"upArrow"}
-        height={"50"}
-        width={"40"}
-        viewBox={"0 0 820 400"}
-      />
-    </StyledGoTopBtn>
+    <>
+      {showBtn && (
+        <StyledGoTopBtn
+          onClick={() => {
+            scroll.scrollToTop();
+          }}
+        >
+          <Icon
+            iconid={"upArrow"}
+            height={"50px"}
+            width={"40px"}
+            viewBox={"0 0 820 400"}
+          />
+        </StyledGoTopBtn>
+      )}
+    </>
   );
 };
 

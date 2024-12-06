@@ -16,7 +16,7 @@ export const projectsData = [
 	},
 	{
 	  subtitle: "RESPONSIVE DESIGN",
-	  title: "I build landing pages and responsive websites and web App",
+	  title: "I build landing pages and responsive websites",
 	  src: proj3,
 	},
 	{

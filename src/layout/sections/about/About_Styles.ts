@@ -13,18 +13,16 @@ const About = styled.section`
   }
 
   @media ${theme.media.mobile} {
-	margin-bottom: 50px;
+	margin: 30px 0 50px;
   }
 `;
 
 const Text = styled.p`
-  max-width: 551px;
+max-width: 551px;
+${font({ lineHeight: 1.4, color: "#494949", Fmax: 18, Fmin: 16 })};
 
-  ${font({ lineHeight: 1.4, color: "#494949", Fmax: 18, Fmin: 16 })};
-  
-
-  @media screen and (max-width: 881px) {
-padding-top: 25px;
+@media screen and (max-width: 881px) {
+	padding-top: 25px;
 }
 
 &:nth-child(2) {
@@ -70,6 +68,10 @@ const Skills = styled.div`
     gap: 30px;
     flex-grow: 1;
     justify-content: space-around;
+  }
+
+  li:hover {
+	transform: scale(1.25);
   }
 `;
 

@@ -6,34 +6,38 @@ import { font } from "../../../styles/CommonFont";
 //Directions
 
 const Direction = styled.div`
+text-align: left;
 `;
 
 const IconWrapper = styled.div`
   padding: 25px;
-  margin: 0 30px 0 0;
+  margin-right: 30px;
   border-radius: 20px;
   background-color: ${theme.colors.fourthBq};
 `;
 
 const Text = styled.p`
   ${font({ weight: 500, lineHeight: 1.3, Fmax: 20, Fmin: 20 })}
-  text-align: left;
 `;
 
 //Slider
 
-const Project = styled.div`
-	padding: 20px;
-	margin: 75px 0 25px;
+const Slider = styled.div`
+	padding: 10px;
+	margin: 50px 0 25px;
 	text-align: left;
 	border: 2px solid silver;
 	border-radius: 30px;
+	cursor: grab;
    background-color: ${theme.colors.font};
 
+	&:active {
+		cursor: grabbing;
+	}
+	
 `;
 
 const ContentText = styled.div`
-	margin-bottom: 20px;
 	
 @media screen and (max-width: 1019px){
 	text-align: center;
@@ -50,35 +54,37 @@ const Title = styled.h2`
   margin: 36px 0 70px;
 
   @media screen and (max-width: 1022px) {
-    margin: 20px 0 10px;
     text-align: center;
+	 margin: 10px 0;
   }
+
 `;
 
-const Link = styled.a`
-  font-weight: 500;
-  font-size: 20px;
+const ProjectLink = styled.a`
+	display: inline-block;
+	font-weight: 500;
+	font-size: 20px;
+	margin-bottom: 10px;
 
-  color: #000000;
-  border: 1px solid ${theme.colors.font};
-  background-color: ${theme.colors.font};
-  border-radius: 20px;
+	color: #000000;
+	border-radius: 20px;
 
-  &::after {
-    content: "--->";
-    margin-left: 15px;
-  }
 
   &:hover {
     color: ${theme.colors.thirdBq};
-  }
+  	}
+
+  &:active {
+    transform: scale(0.95);
+    color: ${theme.colors.thirdBq};
+  	}
 `;
 
 //Common
 
 const Service = styled.section`
   text-align: center;
-  margin: 25px 0;
+  padding: 25px 0;
 `;
 
 const Smalltitle = styled.h3`
@@ -88,7 +94,6 @@ const Smalltitle = styled.h3`
 `;
 
 
-
 export const S = {
-	Direction, IconWrapper, Text, Project, ContentText, Subtitle, Title, Link, Service, Smalltitle
+	Direction, IconWrapper, Text, Slider , ContentText, Subtitle, Title, ProjectLink, Service, Smalltitle
 }

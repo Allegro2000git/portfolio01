@@ -9,7 +9,6 @@ export const theme = {
     headerBq: "#6e7f49",
 
     font: "#FFFFFF",
-
 	 
   },
 

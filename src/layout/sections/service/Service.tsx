@@ -17,7 +17,7 @@ export const Service: React.FC = () => {
           justify={"space-between"}
           align={"center"}
           wrap={"wrap"}
-          gap="25px"
+          gap={"25px"}
         >
           <Direction icon={"code"} number={"01"} title={"UX/UI Design"} />
           <Direction

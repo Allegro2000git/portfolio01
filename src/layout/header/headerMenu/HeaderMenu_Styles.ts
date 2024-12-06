@@ -109,6 +109,7 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
           width: 36px;
         `}
     }
+	
   }
 `;
 

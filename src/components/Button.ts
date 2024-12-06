@@ -13,6 +13,7 @@ type ButtonPropsType = {
 export const Button = styled.button<ButtonPropsType>`
   cursor: pointer;
   font-weight: 500;
+  display: inline-block;
   font-size: 18px;
   white-space: nowrap;
   margin-bottom: 15px;
@@ -26,5 +27,12 @@ export const Button = styled.button<ButtonPropsType>`
   &:hover {
     background-color: #717171;
     color: ${theme.colors.font};
+	 transform: translate(-2px, 3px);
+	 box-shadow: 10px 10px 25px 0px #00000040;
+	 
+
+	&:active {
+	transform: scale(0.95);
+	}
   }
 `;
