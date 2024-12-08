@@ -36,7 +36,7 @@
 .alice-carousel__prev-btn {
 	display: inline-block;
 	position: absolute;
-	bottom: 0px;
+	bottom: -5px;
 	left: -100px;
 	cursor: pointer;
 }
@@ -44,7 +44,7 @@
 .alice-carousel__next-btn {
 	display: inline-block;
 	position: absolute;
-	bottom: 0px;
+	bottom: -5px;
 	right: -100px;
 	cursor: pointer;
 }

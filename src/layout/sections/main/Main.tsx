@@ -27,12 +27,34 @@ export const Main: React.FC = () => {
               </S.Flag>{" "}
               I love designing, coding, creating and building stuff.
             </S.Text>
-            <Button padding={"12px 40px"} color={"#151D41"} lineHeight={"1.3"}>
+
+            <Button
+              padding={"12px 40px"}
+              color={"#151D41"}
+              lineHeight={"1.3"}
+              background={"#a4e6a3"}
+            >
               Send Email
             </Button>
           </div>
           <Image src={mainImg} borderRadius={"25px"} />
         </FlexWrapper>
+        <S.Eclipse1>
+          <Icon
+            iconid={"ecl2"}
+            height={"193px"}
+            width={"193px"}
+            viewBox={"0 0 193 193"}
+          />
+        </S.Eclipse1>
+        <S.Eclipse2>
+          <Icon
+            iconid={"ecl1"}
+            height={"193px"}
+            width={"193px"}
+            viewBox={"0 0 193 193"}
+          />
+        </S.Eclipse2>
       </Container>
     </S.Main>
   );

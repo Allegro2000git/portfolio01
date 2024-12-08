@@ -4,7 +4,7 @@ import { theme } from "../../../styles/Theme";
 
 const Contact = styled.section`
   background: ${theme.colors.primaryBq};
-  padding: 25px 0 50px;
+  padding: 50px 0;
  
 
 
@@ -32,7 +32,7 @@ const Field = styled.input`
   font-family: "Poppins", sans-serif;
   width: 100%;
   font-size: 16px;
-  border: 1px solid grey;
+  border: 1px solid ${theme.colors.fourthBq};
   border-radius: 10px;
   padding: 10px;
   color: #000000;

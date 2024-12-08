@@ -35,12 +35,12 @@ const bounce = keyframes`
   }
   60% {
     transform: translateY(-5px);
+	 
   }
 `;
 
 const Item = styled.li`
   cursor: pointer;
- 
 
   &:hover {
 	transition: transform linear;
@@ -48,6 +48,7 @@ const Item = styled.li`
   }
 `;
 const Link = styled.a`
+
 `
 
 

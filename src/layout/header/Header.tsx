@@ -17,8 +17,15 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
+  const [scrolled, setScrolled] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <S.Header>
+    <S.Header className={scrolled ? "scrolled" : ""}>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
           <Link />

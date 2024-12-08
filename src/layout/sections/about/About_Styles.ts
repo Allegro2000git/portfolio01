@@ -7,7 +7,6 @@ import { font } from "../../../styles/CommonFont";
 const About = styled.section`
   margin: 60px 0 90px;
   background-color: ${theme.colors.secondaryBq};
-  display: flex;
   span {
     color: ${theme.colors.thirdBq};
   }
@@ -27,6 +26,7 @@ ${font({ lineHeight: 1.4, color: "#494949", Fmax: 18, Fmin: 16 })};
 
 &:nth-child(2) {
 	margin: 10px 0 15px;
+	text-align: left;
 }
 
 `;
@@ -63,11 +63,10 @@ const ImageWrapper = styled.div`
 
 const Skills = styled.div`
   ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    flex-grow: 1;
-    justify-content: space-around;
+    display: grid;
+	 grid-template-rows: 2;
+	 grid-template-columns: repeat(3, 1fr);
+	 gap: 30px;
   }
 
   li:hover {

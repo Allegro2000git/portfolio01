@@ -8,10 +8,10 @@ const MenuItem = styled.li``;
 const LinkNav = styled(Link)`
   font-weight: 500;
   font-size: 18px;
-  color: ${theme.colors.thirdBq};
+  color: #000000;
 
-  &:hover, &.active {
-    color: #000000;
+  &.active {
+	color: blue;
   }
 `;
 
@@ -74,7 +74,7 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
     ${(props) =>
       props.isOpen &&
       css<{ isOpen: boolean }>`
-        background-color: ${theme.colors.primaryBq};
+        background-color: rgba(206,212,211,0);
       `}
 
     &::before {

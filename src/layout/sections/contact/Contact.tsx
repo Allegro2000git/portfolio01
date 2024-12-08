@@ -63,6 +63,7 @@ export const Contact: React.FC = () => {
             padding={"16px 32px"}
             maxWidth={"170px"}
             color={"#151D41"}
+            background={"#a4e6a3"}
           >
             Submit
           </Button>

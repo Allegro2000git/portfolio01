@@ -20,7 +20,7 @@ export const About: React.FC = () => {
               height={"420px"}
             />
           </S.ImageWrapper>
-          <FlexWrapper direction={"column"} align={"start"}>
+          <FlexWrapper direction={"column"} align={"center"}>
             <S.Text>
               Hello! My name is Fabio Scaletta and I am a{" "}
               <span>UX/UI designer</span> and <span>Front End Developer</span>.

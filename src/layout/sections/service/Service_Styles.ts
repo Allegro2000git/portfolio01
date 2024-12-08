@@ -34,7 +34,16 @@ const Slider = styled.div`
 	&:active {
 		cursor: grabbing;
 	}
-	
+
+	@media ${theme.media.tablet} {
+		height: 600px;
+	}
+
+	@media ${theme.media.mobile} {
+		height: 450px;
+	}
+
+
 `;
 
 const ContentText = styled.div`
@@ -65,7 +74,6 @@ const ProjectLink = styled.a`
 	font-weight: 500;
 	font-size: 20px;
 	margin-bottom: 10px;
-
 	color: #000000;
 	border-radius: 20px;
 

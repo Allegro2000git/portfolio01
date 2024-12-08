@@ -7,7 +7,6 @@ import { projectsData } from "./Projects";
 import "../../../../styles/sliderCustom.css";
 import { Icon } from "../../../../components/icon/Icon";
 import Typewriter from "typewriter-effect";
-import { Button } from "../../../../components/Button";
 
 type SlidePropsType = {
   subtitle: string;
