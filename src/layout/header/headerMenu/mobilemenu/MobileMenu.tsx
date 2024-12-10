@@ -15,6 +15,7 @@ export const MobileMenu: React.FC = () => {
       </S.Burgerbutton>
 
       <S.MobileMenuPopUp
+        aria-modal="true"
         isOpen={menuIsOpen}
         onClick={() => {
           setmenuIsOpen(false);

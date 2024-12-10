@@ -12,6 +12,7 @@ const LinkNav = styled(Link)`
 
   &.active {
 	color: ${theme.colors.thirdBq};
+	border-bottom: 2px solid ${theme.colors.thirdBq};
   }
 `;
 

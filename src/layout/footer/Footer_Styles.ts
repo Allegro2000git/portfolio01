@@ -45,6 +45,7 @@ const Item = styled.li`
   &:hover {
 	transition: transform linear;
 	animation: ${bounce} 1.5s infinite;
+	
   }
 `;
 const Link = styled.a`

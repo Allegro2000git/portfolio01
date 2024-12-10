@@ -40,4 +40,14 @@ button {
 	cursor: pointer;
   }
 
+
+@media (prefers-reduced-motion: reduce) {
+*, 
+*::before, 
+*::after {
+	animation: none;
+	transition: none;
+	}
+}
+
 `;
