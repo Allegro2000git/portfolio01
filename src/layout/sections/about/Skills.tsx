@@ -18,16 +18,14 @@ const skills: Array<SkillsPropsType> = [
 export const Skills: React.FC = () => {
   return (
     <S.Skills>
-      <ul>
-        {skills.map((item, index) => {
-          return (
-            <li key={index}>
-              <Icon iconid={item.icon} viewBox={"0 0 120 110"} />
-              <S.Title>{item.title}</S.Title>
-            </li>
-          );
-        })}
-      </ul>
+      {skills.map((item, index) => {
+        return (
+          <li key={index}>
+            <Icon iconid={item.icon} viewBox={"0 0 120 110"} />
+            <S.Title>{item.title}</S.Title>
+          </li>
+        );
+      })}
     </S.Skills>
   );
 };

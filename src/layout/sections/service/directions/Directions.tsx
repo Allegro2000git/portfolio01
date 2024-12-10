@@ -18,7 +18,7 @@ export const Direction: React.FC<DirectionsPropsType> = (
           <Icon iconid={props.icon} />
         </S.IconWrapper>
         <div>
-          <S.Text>{props.number}</S.Text>
+          <S.Number>{props.number}</S.Number>
           <S.Text>{props.title}</S.Text>
         </div>
       </FlexWrapper>

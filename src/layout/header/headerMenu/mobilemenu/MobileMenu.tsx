@@ -3,22 +3,21 @@ import { S } from "../HeaderMenu_Styles";
 import { Menu } from "../menu/Menu";
 
 export const MobileMenu: React.FC = () => {
-  const [menuisOpen, setmenuisOpen] = useState(false);
-
+  const [menuIsOpen, setmenuIsOpen] = useState(false);
   const onBurgerBtnClick = () => {
-    setmenuisOpen(!menuisOpen);
+    setmenuIsOpen(!menuIsOpen);
   };
 
   return (
     <S.MobileMenu>
-      <S.Burgerbutton isOpen={menuisOpen} onClick={onBurgerBtnClick}>
+      <S.Burgerbutton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </S.Burgerbutton>
 
       <S.MobileMenuPopUp
-        isOpen={menuisOpen}
+        isOpen={menuIsOpen}
         onClick={() => {
-          setmenuisOpen(false);
+          setmenuIsOpen(false);
         }}
       >
         <Menu />

@@ -20,6 +20,10 @@ const Text = styled.p`
   ${font({ weight: 500, lineHeight: 1.3, Fmax: 20, Fmin: 20 })}
 `;
 
+const Number = styled.span`
+  ${font({ weight: 500, lineHeight: 1.3, Fmax: 20, Fmin: 20 })}
+`
+
 //Slider
 
 const Slider = styled.div`
@@ -103,5 +107,5 @@ const Smalltitle = styled.h3`
 
 
 export const S = {
-	Direction, IconWrapper, Text, Slider , ContentText, Subtitle, Title, ProjectLink, Service, Smalltitle
+	Direction, IconWrapper, Number, Text, Slider , ContentText, Subtitle, Title, ProjectLink, Service, Smalltitle
 }

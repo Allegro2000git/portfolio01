@@ -25,15 +25,15 @@ export const Button = styled.button<ButtonPropsType>`
   background: ${(props) => props.background || theme.colors.thirdBq};
 
   &:hover {
-    background-color: #717171;
+    background-color: ${theme.colors.thirdBq};
     color: ${theme.colors.font};
-	 transform: translate(-2px, 3px);
+
 	 box-shadow: 10px 10px 25px 0px #00000040;
 	 transition-delay: 0.15s;
 	 
 
 	&:active {
-	transform: scale(0.95);
+	transform: scale(0.8);
 	}
   }
 `;

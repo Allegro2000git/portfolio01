@@ -30,9 +30,7 @@ export const About: React.FC = () => {
               and Front-end Development. Specialize in Information Security and
               software engineering, creating dynamic and beautiful web pages. I
               have been in the field for nearly 5 years, and have been loving
-              every minute of it.
-            </S.Text>
-            <S.Text>
+              every minute of it. <br />
               Here are a few technologies I’ve been working with recently:
             </S.Text>
             <Skills />

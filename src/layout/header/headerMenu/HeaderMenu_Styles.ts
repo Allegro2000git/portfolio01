@@ -11,7 +11,7 @@ const LinkNav = styled(Link)`
   color: #000000;
 
   &.active {
-	color: blue;
+	color: ${theme.colors.thirdBq};
   }
 `;
 
@@ -29,13 +29,14 @@ const MobileMenu = styled.nav``;
 
 const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  background-color: rgba(206,212,211,0.8);
+  background-color: rgba(164, 230, 163);
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 999;
   display: none;
+
 
   ${(props) =>
     props.isOpen &&
@@ -51,6 +52,8 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
     gap: 12px;
     justify-content: center;
     align-items: center;
+	 
+
   }
 `;
 

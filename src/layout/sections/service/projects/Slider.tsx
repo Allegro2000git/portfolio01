@@ -54,9 +54,9 @@ export const Slider = () => (
         return (
           <Icon
             iconid={"leftBtn"}
-            width={"60px"}
-            height={"40px"}
-            viewBox={"0 0 100 100"}
+            width={"50px"}
+            height={"50px"}
+            viewBox={"0 0 200 200"}
           />
         );
       }}
@@ -64,9 +64,9 @@ export const Slider = () => (
         return (
           <Icon
             iconid={"rightBtn"}
-            width={"60px"}
-            height={"40px"}
-            viewBox={"0 0 100 100"}
+            width={"50px"}
+            height={"50px"}
+            viewBox={"0 0 200 200"}
           />
         );
       }}

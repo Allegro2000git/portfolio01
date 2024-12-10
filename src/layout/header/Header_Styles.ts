@@ -10,6 +10,7 @@ const Header = styled.header`
 
   &.scrolled {
 	background-color: rgba(164, 230, 163, 0.90);
+	transition-duration: 0.5s;
   }
 `;
 

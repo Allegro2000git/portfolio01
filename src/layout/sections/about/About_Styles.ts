@@ -19,16 +19,11 @@ const About = styled.section`
 const Text = styled.p`
 max-width: 551px;
 ${font({ lineHeight: 1.4, color: "#494949", Fmax: 18, Fmin: 16 })};
+margin-bottom: 25px;
 
 @media screen and (max-width: 881px) {
 	padding-top: 25px;
 }
-
-&:nth-child(2) {
-	margin: 10px 0 15px;
-	text-align: left;
-}
-
 `;
 
 const ImageWrapper = styled.div`
@@ -61,17 +56,11 @@ const ImageWrapper = styled.div`
 
 // map Skills
 
-const Skills = styled.div`
-  ul {
+const Skills = styled.ul`
     display: grid;
 	 grid-template-rows: 2;
 	 grid-template-columns: repeat(3, 1fr);
 	 gap: 30px;
-  }
-
-  li:hover {
-	transform: scale(1.25);
-  }
 `;
 
 const Title = styled.p`
