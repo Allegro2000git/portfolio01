@@ -19,7 +19,7 @@ const items = [
   },
 ];
 
-export const Menu: React.FC = () => {
+export const Menu = ({ onClose }: { onClose?: () => void }) => {
   return (
     <ul>
       {items.map((item, index) => {
@@ -31,6 +31,7 @@ export const Menu: React.FC = () => {
               to={item.href}
               activeClass={"active"}
               offset={-320}
+              onClick={onClose}
             >
               {item.title}
             </S.LinkNav>

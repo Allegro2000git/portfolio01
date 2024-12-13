@@ -17,13 +17,11 @@ const Copyright = styled.small`
 
 //Social
 
-const Social = styled.nav`
-  ul {
+const Social = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: space-between;
-  }
 `;
 
 const bounce = keyframes`

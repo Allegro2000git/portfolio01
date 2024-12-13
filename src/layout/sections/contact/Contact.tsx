@@ -58,13 +58,7 @@ export const Contact: React.FC = () => {
             as={"textarea"}
             required
           />
-          <Button
-            type={"submit"}
-            padding={"16px 32px"}
-            maxWidth={"170px"}
-            color={"#151D41"}
-            background={"#a4e6a3"}
-          >
+          <Button type={"submit"} padding={"16px 32px"} color={"#000000"}>
             Submit
           </Button>
         </S.Form>

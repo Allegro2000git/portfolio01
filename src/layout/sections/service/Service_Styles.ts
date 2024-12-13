@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/CommonFont";
+import { Image } from "../../../components/wrapper/Image";
+import { Button } from "../../../components/Button";
 
 
 //Directions
 
 const Direction = styled.div`
-text-align: left;
+  text-align: left;
+  max-width: 300px;
 `;
 
 const IconWrapper = styled.div`
@@ -27,13 +30,26 @@ const Number = styled.span`
 //Slider
 
 const Slider = styled.div`
+	margin: 163px 0 25px;
 	padding: 10px;
-	margin: 50px 0 25px;
 	text-align: left;
 	border: 2px solid silver;
 	border-radius: 30px;
 	cursor: grab;
    background-color: ${theme.colors.font};
+
+
+	@media screen and (max-width: 1026px) {
+			margin-top: 80px;
+		}
+
+	${Image} {
+		transform: translateY(-53px);
+
+		@media screen and (max-width: 982px) {
+			transform: none;
+		}
+	}
 
 	&:active {
 		cursor: grabbing;
@@ -44,15 +60,13 @@ const Slider = styled.div`
 	}
 
 	@media ${theme.media.mobile} {
-		height: 450px;
+		height: 460px;
 	}
-
-
 `;
 
 const ContentText = styled.div`
 	
-@media screen and (max-width: 1019px){
+@media screen and (max-width: 1020px){
 	text-align: center;
 }
 `
@@ -73,24 +87,12 @@ const Title = styled.h2`
 
 `;
 
-const ProjectLink = styled.a`
-	display: inline-block;
-	font-weight: 500;
-	font-size: 20px;
-	margin-bottom: 10px;
-	color: #000000;
-	border-radius: 20px;
+const ButtonLinks = styled.div`
+margin-bottom: 10px;
+${Button}:nth-child(1) {
+	margin-right: 25px;
+}`
 
-
-  &:hover {
-    color: ${theme.colors.thirdBq};
-  	}
-
-  &:active {
-    transform: scale(0.95);
-    color: ${theme.colors.thirdBq};
-  	}
-`;
 
 //Common
 
@@ -99,7 +101,7 @@ const Service = styled.section`
   padding: 25px 0;
 `;
 
-const Smalltitle = styled.h3`
+const SmallTitle = styled.h3`
   font-weight: 400;
   font-size: 18px;
   color: #494949;
@@ -107,5 +109,5 @@ const Smalltitle = styled.h3`
 
 
 export const S = {
-	Direction, IconWrapper, Number, Text, Slider , ContentText, Subtitle, Title, ProjectLink, Service, Smalltitle
+	Direction, IconWrapper, Number, Text, Slider , ContentText, Subtitle, Title, ButtonLinks, Service, SmallTitle
 }

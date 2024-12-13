@@ -16,18 +16,15 @@ const socialItems: Array<SocialItemPropsType> = [
 export const Social: React.FC = () => {
   return (
     <S.Social>
-      <ul>
-        {socialItems.map((item, index) => {
-          return (
-            <S.Item key={index}>
-              {" "}
-              <S.Link href={item.url} target="_blank">
-                <Icon iconid={item.icon} viewBox={"-25 -25 90 90"} />
-              </S.Link>
-            </S.Item>
-          );
-        })}
-      </ul>
+      {socialItems.map((item, index) => {
+        return (
+          <S.Item key={index}>
+            <S.Link href={item.url} target={"_blank"}>
+              <Icon iconid={item.icon} viewBox={"-25 -25 90 90"} />
+            </S.Link>
+          </S.Item>
+        );
+      })}
     </S.Social>
   );
 };

@@ -5,6 +5,7 @@ type IconPropsType = {
   width?: string;
   height?: string;
   viewBox?: string;
+  transform?: string;
 };
 
 export const Icon = (props: IconPropsType) => {

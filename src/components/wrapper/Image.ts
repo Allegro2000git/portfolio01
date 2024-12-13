@@ -26,6 +26,7 @@ export const Image = styled.img<ImageWrapperPropsType>`
   @media ${theme.media.mobile} {
     width: 360px;
     height: 340px;
+	 transform: none;
   }
 
   @media screen and (max-width: 454px) {

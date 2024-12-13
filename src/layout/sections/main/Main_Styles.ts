@@ -1,16 +1,54 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/CommonFont";
+import { Button } from "../../../components/Button";
+import ecl1 from "../../../assets/ecl1.svg";
+import ecl2 from "../../../assets/ecl2.svg";
 
 const Main = styled.section`
   	position: relative;
+	z-index: 5;
+	width: 100%;
   	background: ${theme.colors.primaryBq};
   	padding: 132px 0 50px;
 	overflow: hidden;
+
+	&:before {
+		content: "";
+		background-image: url(${ecl1}) ;
+		background-repeat: no-repeat;
+		position: absolute;
+		width:193px;
+		height: 193px;
+		top: 20%;
+		left: 0;
+
+	}
+
+	&:after {
+		content: "";
+		background-image: url(${ecl2}) ;
+		background-repeat: no-repeat;
+		position: absolute;
+		width:193px;
+		height: 193px;
+		top: 0;
+		right: -5%;
+	}
+
+	${Button} {
+		margin-bottom: 15px;
+	}
 	
 	@media  ${theme.media.mobile} {
 		padding-top: 100px;
 	 }
+
+	&::before, &::after {
+		@media screen and (max-width: 1320px) {
+			display: none;
+		}
+	}
 `;
 
 const SmallText = styled.h2`
@@ -35,30 +73,6 @@ const Text = styled.p`
   margin-bottom: 32px;
 `;
 
-const Flag = styled.span``
-
-const Eclipse1 = styled.span`
-position: absolute;
-top: 20%;
-left: 0;
-
-@media screen and (max-width: 1320px) {
-	display: none;
-}
-`
-
-const Eclipse2 = styled.span`
-position: absolute;
-top: 0;
-right: -5%;
-
-@media screen and (max-width: 1320px) {
-	display: none;
-}
-`
-
-
-
 export const S = {
-	Main, SmallText, Title, Text, Flag, Eclipse1, Eclipse2
+	Main, SmallText, Title, Text
 }

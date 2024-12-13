@@ -27,7 +27,8 @@
 .alice-carousel__dots-item:not(.__custom).__active {
 	background-color: #0FBF61;
 	width: 16px;
-	border-radius: 25%;
+	border-radius: 25px;
+	transition-duration: 1s;
 }
 
 /*  Buttons  */
@@ -35,21 +36,30 @@
 .alice-carousel__prev-btn {
 	display: inline-block;
 	position: absolute;
-	bottom: -20px;
+	bottom: -1px;
 	left: -100px;
 	cursor: pointer;
-	;
+	padding: 0;
+}
+
+.alice-carousel__prev-btn svg {
+	transform: rotate(-90deg);
 }
 
 .alice-carousel__next-btn {
 	display: inline-block;
 	position: absolute;
-	bottom: -20px;
+	bottom: -5px;
 	right: -100px;
 	cursor: pointer;
+	padding: 0;
+}
+
+.alice-carousel__next-btn svg {
+	transform: rotate(90deg);
 }
 
 .alice-carousel__prev-btn:active,
 .alice-carousel__next-btn:active {
-	transform: translate(-2px, 2px);
+	transform: translate(-2px, 1px);
 }

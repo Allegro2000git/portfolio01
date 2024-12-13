@@ -3,10 +3,10 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { S } from "../Service_Styles";
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper";
 import { Image } from "../../../../components/wrapper/Image";
-import { projectsData } from "./Projects";
+import { projectsData } from "./ProjectsData";
 import "../../../../styles/sliderCustom.css";
 import { Icon } from "../../../../components/icon/Icon";
-import Typewriter from "typewriter-effect";
+import { Button } from "../../../../components/Button";
 
 type SlidePropsType = {
   subtitle: string;
@@ -21,15 +21,10 @@ const Slide = (props: SlidePropsType) => {
         <S.ContentText>
           <S.Subtitle>{props.subtitle}</S.Subtitle>
           <S.Title>{props.title}</S.Title>
-          <S.ProjectLink>
-            <Typewriter
-              options={{
-                strings: ["Learn more... --->", "Project --->"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </S.ProjectLink>
+          <S.ButtonLinks>
+            <Button padding={"10px"}>Project</Button>
+            <Button padding={"10px"}>Code</Button>
+          </S.ButtonLinks>
         </S.ContentText>
         <Image
           borderRadius={"20px"}
@@ -55,8 +50,8 @@ export const Slider = () => (
           <Icon
             iconid={"leftBtn"}
             width={"50px"}
-            height={"50px"}
-            viewBox={"0 0 200 200"}
+            height={"25px"}
+            viewBox={"200 0 200 500"}
           />
         );
       }}
@@ -65,8 +60,8 @@ export const Slider = () => (
           <Icon
             iconid={"rightBtn"}
             width={"50px"}
-            height={"50px"}
-            viewBox={"0 0 200 200"}
+            height={"25px"}
+            viewBox={"200 0 200 500"}
           />
         );
       }}

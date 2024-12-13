@@ -1,7 +1,6 @@
 import { S } from "./Footer_Styles";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
-
 import { Social } from "./socials/Socials";
 
 export const Footer = () => {
